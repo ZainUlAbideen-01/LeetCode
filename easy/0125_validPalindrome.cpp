@@ -8,12 +8,9 @@ public:
             }
             s[i] = tolower(s[i]);
             s[j] = tolower(s[j]);
-            if (s[i] == ',' || s[i] == '.' || s[i] == ' ' || s[i] == ';' ||
-                s[i] == ':' || s[i] == '\'' || s[i] == '\"') {
+            if (!isalnum(s[i])) {
                 continue;
-            } else if (s[j] == ',' || s[j] == '.' || s[j] == ' ' ||
-                       s[j] == ';' || s[j] == ':' || s[j] == '\'' ||
-                       s[j] == '\"') {
+            } else if (!isalnum(s[j])) {
                 i--;
                 j--;
                 continue;
